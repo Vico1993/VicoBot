@@ -14,15 +14,15 @@ bot.on('error', (err) => {
 bot.on('message', (payload, reply) => {
   let text = payload.message.text
 
-  console.log( text );
-
   bot.getProfile(payload.sender.id, (err, profile) => {
     if (err) throw err
+
+    console.log( `Il y a ${profile.first_name} ${profile.last_name} qui me parle...` );
 
     reply({ text }, (err) => {
       if (err) throw err
 
-      console.log(`Echoed back to ${profile.first_name} ${profile.last_name}: ${text}`)
+      // console.log(`Echoed back to ${profile.first_name} ${profile.last_name}: ${text}`)
     })
   })
 })
