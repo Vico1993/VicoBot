@@ -1,0 +1,19 @@
+{
+  "name": "victor_vbot",
+  "version": "0.0.1",
+  "description": "Victor's Personal Bots ",
+  "main": "app.js",
+  "scripts": {
+    "test": "rum"
+  },
+  "keywords": [
+    "bot",
+    "messenger",
+    "victor"
+  ],
+  "author": "Victor Piolin",
+  "license": "ISC",
+  "dependencies": {
+    "messenger-bot": "^2.4.0"
+  }
+}
