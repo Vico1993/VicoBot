@@ -17,7 +17,7 @@ bot.on('message', (payload, reply) => {
   bot.getProfile(payload.sender.id, (err, profile) => {
     if (err) throw err
 
-    console.log( `Il y a ${profile.first_name} ${profile.last_name} qui me parle...` );
+    console.log( `Il y a ${profile.first_name} ${profile.last_name} qui me parle... Oulah, je comprend rien.` );
 
     reply({ text }, (err) => {
       if (err) throw err
