@@ -15,7 +15,6 @@ bot.on('message', (payload, reply) => {
   let text = payload.message.text
 
   console.log( text );
-  console.log( 'toto' );
 
   bot.getProfile(payload.sender.id, (err, profile) => {
     if (err) throw err
