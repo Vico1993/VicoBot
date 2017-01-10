@@ -6,6 +6,7 @@ logs
 .babelrc
 npm-debug.log*
 old/
+node_modules
 
 # Runtime data
 pids
