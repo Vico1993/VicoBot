@@ -8,6 +8,8 @@ let bot = new Bot({
   app_secret: config.secret
 })
 
+bot.setGetStartedButton( 'Cool' );
+
 bot.on('error', (err) => {
   console.log(err.message)
 })
