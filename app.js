@@ -55,7 +55,8 @@ bot.on('message', (payload, reply) => {
               }]
             }]
           }
-        };
+        }
+      };
 
     bot.sendMessage( payload.sender.id, messageData,  ( err, info ) => {
       if (err) throw err
