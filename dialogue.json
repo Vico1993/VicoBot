@@ -1,3 +1,5 @@
 [
-  { "bonjour": "hello!" }
+  { "bonjour": {
+    "text": "Hey! Bonjour toi!"
+  }}
 ]
