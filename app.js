@@ -62,10 +62,11 @@ bot.on('message', (payload, reply) => {
     //     }
     //   };
 
-    bot.sendMessage( payload.sender.id, "toto",  ( err, info ) => {
-      if (err) console.log( err )
-      // throw err
-    })
+    // bot.sendMessage( payload.sender.id, commande.bonjour,  ( err, info ) => {
+    //   if (err) console.log( err )
+    // })
+
+    console.log( text )
 
     // reply({text} , (err) => {
     //   if (err) throw err
