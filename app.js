@@ -60,9 +60,6 @@ bot.on('message', (payload, reply) => {
 
     bot.sendMessage( payload.sender.id, messageData,  ( err, info ) => {
       if (err) throw err
-
-      console.log( "PostBack" );
-      console.log( info );
     })
 
     // reply({text} , (err) => {
@@ -71,6 +68,14 @@ bot.on('message', (payload, reply) => {
     //   // console.log(`Echoed back to ${profile.first_name} ${profile.last_name}: ${text}`)
     // })
   })
+})
+
+bot.on('postback', (payload, reply, actions) => {
+  reply({ text: 'hey!'}, (err, info) => {})
+
+  console.log( "PostBack" );
+  console.log( actions );
+  console.log( payload );
 })
 
 http.createServer(bot.middleware()).listen(3000)
