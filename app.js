@@ -62,17 +62,11 @@ bot.on('message', (payload, reply) => {
     //     }
     //   };
 
-    // bot.sendMessage( payload.sender.id, commande.bonjour,  ( err, info ) => {
-    //   if (err) console.log( err )
-    // })
+    console.log( commande.bonjour );
 
-    console.log( text )
-
-    // reply({text} , (err) => {
-    //   if (err) throw err
-    //
-    //   // console.log(`Echoed back to ${profile.first_name} ${profile.last_name}: ${text}`)
-    // })
+    bot.sendMessage( payload.sender.id, commande.bonjour,  ( err, info ) => {
+      if (err) console.log( err )
+    })
   })
 })
 
