@@ -16,9 +16,6 @@ bot.on('message', (payload, reply) => {
   let text = payload.message.text
 
   var messageData = {
-    recipient: {
-      id: recipientId
-    },
     message: {
       attachment: {
         type: "template",
