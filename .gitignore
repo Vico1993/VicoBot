@@ -7,7 +7,7 @@ logs
 npm-debug.log*
 old/
 node_modules
-config.js
+./config.js
 
 # Runtime data
 pids
