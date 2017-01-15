@@ -60,6 +60,9 @@ bot.on('message', (payload, reply) => {
 
     bot.sendMessage( payload.sender.id, messageData,  ( err, info ) => {
       if (err) throw err
+
+      console.log( "PostBack" );
+      console.log( info );
     })
 
     // reply({text} , (err) => {
