@@ -1,8 +1,11 @@
 {
   "bonjour": {
-    "text": "Hey! Bonjour toi!"
+    "text": "Hey! Bonjour vous!"
   },
   "aurevoir": {
-    "text": "Je m'en vais..."
+    "messages" : {
+      "text": "Trop nul ce que tu dis..",
+      "text": "Je m'en vais..."
+    }
   }
 }

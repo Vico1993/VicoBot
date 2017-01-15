@@ -61,8 +61,14 @@ bot.on('message', (payload, reply) => {
     //     }
     //   };
 
-    bot.sendMessage( payload.sender.id, commande.bonjour,  ( err, info ) => {
-      if (err) console.log( err )
+    var tmp = "aurevoir"
+
+    commande[tmp].messages.each( function( meassage ) {
+      bot.sendMessage( payload.sender.id, commande.bonjour,  ( err, info ) => {
+        if (err) {
+          console.log( err )
+        }
+      })
     })
   })
 })
