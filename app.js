@@ -1,5 +1,8 @@
 const http = require('http')
+const config = require( './config.js' )
 const Bot = require('messenger-bot')
+
+console.log( config.secret );
 
 let bot = new Bot({
   token: 'EAAKj8y1NHI4BACBZAFuBK6AHez7AGz4fbQUwxCTZAcGLopBwhl7HAAiNnMO64AtywNB0PiN5XOJedij2kPGQMhhYwhwEgx7PhTSN7TN8qOgV2wsZAd03IFl92ZCVCYqXFZBlULZBYAlTTHQHbfi9wMEY9ZCPUTfjKKULtz0pI6qiAZDZD',
