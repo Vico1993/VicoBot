@@ -3,9 +3,9 @@
     "text": "Hey! Bonjour vous!"
   },
   "aurevoir": {
-    "messages" : {
-      "text": "Trop nul ce que tu dis..",
-      "text": "Je m'en vais..."
-    }
+    "messages" : [
+      { "text": "Trop nul ce que tu dis.." },
+      { "text": "Je m'en vais..." }
+    ]
   }
 }
