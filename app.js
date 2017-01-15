@@ -4,7 +4,7 @@ const config = require( './config.js' )
 const Bot = require('messenger-bot')
 
 
-var commande = JSON.parse(fs.readFileSync('file', 'utf8'))
+var commande = JSON.parse(fs.readFileSync('dialogue.json', 'utf8'))
 
 let bot = new Bot({
   token: config.token,
