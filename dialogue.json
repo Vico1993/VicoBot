@@ -1,5 +1,3 @@
 [
-  "comande" : {
-      "bonjour" : 
-  }
+  { "bonjour": "hello!" }
 ]
