@@ -1,5 +1,8 @@
-[
-  { "bonjour": {
+{
+  "bonjour": {
     "text": "Hey! Bonjour toi!"
-  }}
-]
+  },
+  "aurevoir": {
+    "text": "Je m'en vais..."
+  }
+}

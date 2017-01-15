@@ -3,7 +3,6 @@ const http = require('http')
 const config = require( './config.js' )
 const Bot = require('messenger-bot')
 
-
 var commande = JSON.parse(fs.readFileSync('dialogue.json', 'utf8'))
 
 let bot = new Bot({
@@ -61,8 +60,6 @@ bot.on('message', (payload, reply) => {
     //       }
     //     }
     //   };
-
-    console.log( commande.bonjour );
 
     bot.sendMessage( payload.sender.id, commande.bonjour,  ( err, info ) => {
       if (err) console.log( err )
