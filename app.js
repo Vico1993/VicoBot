@@ -64,7 +64,7 @@ bot.on('message', (payload, reply) => {
     var tmp = "aurevoir"
 
     commande[ tmp ][ "messages" ].map( function( message ) {
-      bot.sendMessage( payload.sender.id, commande.bonjour,  ( err, info ) => {
+      bot.sendMessage( payload.sender.id, message,  ( err, info ) => {
         if (err) {
           console.log( err )
         }
