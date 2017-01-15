@@ -1,6 +1,8 @@
 {
   "bonjour": {
-    "text": "Hey! Bonjour vous!"
+    "messages": [
+      {"text": "Hey! Bonjour vous!"}
+    ]
   },
   "aurevoir": {
     "messages" : [
