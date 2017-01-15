@@ -8,8 +8,6 @@ let bot = new Bot({
   app_secret: config.secret
 })
 
-bot.setGetStartedButton( 'Cool' );
-
 bot.on('error', (err) => {
   console.log(err.message)
 })
@@ -17,14 +15,56 @@ bot.on('error', (err) => {
 bot.on('message', (payload, reply) => {
   let text = payload.message.text
 
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "generic",
+          elements: [{
+            title: "rift",
+            subtitle: "Next-generation virtual reality",
+            item_url: "https://www.oculus.com/en-us/rift/",
+            image_url: "http://messengerdemo.parseapp.com/img/rift.png",
+            buttons: [{
+              type: "web_url",
+              url: "https://www.oculus.com/en-us/rift/",
+              title: "Open Web URL"
+            }, {
+              type: "postback",
+              title: "Call Postback",
+              payload: "Payload for first bubble",
+            }],
+          }, {
+            title: "touch",
+            subtitle: "Your Hands, Now in VR",
+            item_url: "https://www.oculus.com/en-us/touch/",
+            image_url: "http://messengerdemo.parseapp.com/img/touch.png",
+            buttons: [{
+              type: "web_url",
+              url: "https://www.oculus.com/en-us/touch/",
+              title: "Open Web URL"
+            }, {
+              type: "postback",
+              title: "Call Postback",
+              payload: "Payload for second bubble",
+            }]
+          }]
+        }
+      }
+    }
+  };
+
   bot.getProfile(payload.sender.id, (err, profile) => {
     if (err) throw err
 
     console.log( `Il y a ${profile.first_name} ${profile.last_name} qui me parle... Oulah, je comprend rien, je vais me coucher` );
 
-    reply({ text }, (err) => {
+    reply({ messageData }, (err) => {
       if (err) throw err
-
       // console.log(`Echoed back to ${profile.first_name} ${profile.last_name}: ${text}`)
     })
   })
