@@ -2,12 +2,10 @@ const http = require('http')
 const config = require( './config.js' )
 const Bot = require('messenger-bot')
 
-console.log( config.secret );
-
 let bot = new Bot({
-  token: 'EAAKj8y1NHI4BACBZAFuBK6AHez7AGz4fbQUwxCTZAcGLopBwhl7HAAiNnMO64AtywNB0PiN5XOJedij2kPGQMhhYwhwEgx7PhTSN7TN8qOgV2wsZAd03IFl92ZCVCYqXFZBlULZBYAlTTHQHbfi9wMEY9ZCPUTfjKKULtz0pI6qiAZDZD',
-  verify: 'victor_bot',
-  app_secret: 'e28cc2d2c8c4dc81d21811e4f13ca34b'
+  token: config.token,
+  verify: config.verify,
+  app_secret: config.secret
 })
 
 bot.on('error', (err) => {
